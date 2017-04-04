@@ -36,7 +36,6 @@ def checkrule(string, search=re.compile(r'[^lnru]').search):
     return not bool(search(string))
 
 
-
 def main(argv):
 
     # parse command-line arguments, but not quite yet.
@@ -99,6 +98,7 @@ def update(i, grid, ants, ax, animate, maxiter):
             plt.show()
         return grid, ants
 
+    
 class Grid:
 
     """
@@ -152,6 +152,7 @@ class Grid:
 
         return check
 
+    
 class Ant:
 
     """
