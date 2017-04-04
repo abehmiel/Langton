@@ -17,6 +17,8 @@ The plan is to have these as command line arguments. But for now this will do.
 dimen_x = 128
 dimen_y = 128
 maxiter = 11000
+my_dpi = 72
+img_size_pixels = 240
 # if animating, keep in mind rendering takes a long time. Try a neighborhood of maxiter = ~100 at first.
 animate = False
 num_ants = 1
@@ -54,7 +56,7 @@ def main(argv):
     for i in range(num_ants):
         ants.append(Ant(face_direction, xpos, ypos, rule, nstates))
 
-    fig = plt.figure()
+    fig = plt.figure(figsize=(img_size_pixels/my_dpi, img_size_pixels/my_dpi), dpi=my_dpi)
     ax = plt.axes()
     ax.set_axis_off()
 
